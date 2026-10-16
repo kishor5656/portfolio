@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
-export default function Hero({ onDownloadCv }) {
+export default function Hero() {
   const [copiedCode, setCopiedCode] = useState(false);
   const [activeTab, setActiveTab] = useState('config');
 
@@ -100,13 +100,16 @@ export const developer = {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <button
-                onClick={onDownloadCv}
+              <a
+                href={personalInfo.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Nanda_Kishor_VM_Resume.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-slate-200 bg-surface-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 transition-all duration-200"
               >
                 <FileDown className="w-4 h-4 text-brand-400" />
                 <span>Download CV</span>
-              </button>
+              </a>
             </div>
 
             {/* Small Social Links */}

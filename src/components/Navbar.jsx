@@ -12,7 +12,7 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar({ onDownloadCv }) {
+export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -120,14 +120,17 @@ export default function Navbar({ onDownloadCv }) {
 
           {/* Right Action: Download CV CTA & Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={onDownloadCv}
+            <a
+              href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Nanda_Kishor_VM_Resume.pdf"
               className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-surface-900 hover:bg-slate-800 border border-slate-700 hover:border-brand-500/40 hover:text-brand-400 transition-all duration-200"
-              aria-label="Download CV"
+              aria-label="Download Resume PDF"
             >
               <FileDown className="w-3.5 h-3.5 text-brand-400" />
               <span>Resume</span>
-            </button>
+            </a>
 
             {/* Mobile Hamburger button */}
             <button
@@ -166,16 +169,17 @@ export default function Navbar({ onDownloadCv }) {
             );
           })}
           <div className="pt-3 border-t border-slate-800/80 mt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onDownloadCv();
-              }}
+            <a
+              href={personalInfo.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Nanda_Kishor_VM_Resume.pdf"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-medium text-slate-100 bg-surface-900 border border-slate-700 hover:border-brand-500/50 hover:text-brand-300 transition-colors"
             >
               <FileDown className="w-4 h-4 text-brand-400" />
               <span>Download CV (PDF)</span>
-            </button>
+            </a>
           </div>
         </div>
       )}
