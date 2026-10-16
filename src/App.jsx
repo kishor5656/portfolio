@@ -1,0 +1,47 @@
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import ResumeModal from './components/ResumeModal';
+
+export default function App() {
+  const [cvModalOpen, setCvModalOpen] = useState(false);
+
+  const handleOpenCvModal = () => {
+    setCvModalOpen(true);
+  };
+
+  const handleCloseCvModal = () => {
+    setCvModalOpen(false);
+  };
+
+  return (
+    <div className="min-h-screen bg-surface-950 text-slate-100 flex flex-col font-sans selection:bg-brand-500/25 selection:text-brand-300">
+      {/* Top Sticky Navigation */}
+      <Navbar onDownloadCv={handleOpenCvModal} />
+
+      {/* Main Content Sections */}
+      <main className="flex-1">
+        <Hero onDownloadCv={handleOpenCvModal} />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Instant CV / Resume Preview Modal */}
+      <ResumeModal isOpen={cvModalOpen} onClose={handleCloseCvModal} />
+    </div>
+  );
+}
