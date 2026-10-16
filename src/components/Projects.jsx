@@ -1,19 +1,9 @@
-import React, { useState } from 'react';
-import {
-  FolderGit2,
-  ExternalLink,
-  Github,
-  CheckCircle2,
-  Maximize2,
-  ChevronRight
-} from 'lucide-react';
+import React from 'react';
+import { FolderGit2, CheckCircle2 } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
 import ProjectMockup from './ProjectMockup';
-import ProjectModal from './ProjectModal';
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
-
   return (
     <section id="projects" className="py-20 md:py-28 border-t border-slate-800/80 bg-surface-950/70 scroll-mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,16 +39,6 @@ export default function Projects() {
               {/* Project Preview Screenshot / Mockup */}
               <div className="relative">
                 <ProjectMockup theme={project.previewTheme} title={project.title} />
-
-                {/* Inspect Modal Overlay Button */}
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className="absolute top-3 right-3 p-2 rounded-lg bg-surface-950/80 backdrop-blur-md text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                  title="Expand project details"
-                  aria-label={`Expand details for ${project.title}`}
-                >
-                  <Maximize2 className="w-3.5 h-3.5" />
-                </button>
               </div>
 
               {/* Card Body */}
@@ -99,76 +79,19 @@ export default function Projects() {
                     Key Features
                   </div>
                   <ul className="space-y-2">
-                    {project.features.slice(0, 3).map((feat, fIdx) => (
+                    {project.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-400 mt-0.5 shrink-0" />
                         <span className="flex-1 break-words">{feat}</span>
                       </li>
                     ))}
-                    {project.features.length > 3 && (
-                      <li className="text-[11px] font-mono text-slate-400 pl-6">
-                        + {project.features.length - 3} more architectural capabilities
-                      </li>
-                    )}
                   </ul>
-                </div>
-
-                {/* Card Actions: GitHub, Live Demo & Details */}
-                <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex flex-wrap items-center gap-2">
-                    {/* GitHub Button */}
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-surface-950 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-colors"
-                      title="GitHub Repository"
-                    >
-                      <Github className="w-3.5 h-3.5 text-slate-400" />
-                      <span>Code</span>
-                    </a>
-
-                    {/* Live Demo Button where applicable */}
-                    {project.liveUrl ? (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-950 bg-brand-400 hover:bg-brand-300 transition-colors"
-                        title="Live Demonstration"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                        <span>Demo</span>
-                      </a>
-                    ) : (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-mono text-slate-400 px-2.5 py-1 bg-surface-950/70 rounded border border-slate-800/60">
-                        Demo on request
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Expand Modal Trigger */}
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-1 text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors py-1 px-1.5 rounded hover:bg-brand-500/10"
-                  >
-                    <span>Inspect</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
                 </div>
 
               </div>
             </div>
           ))}
         </div>
-
-        {/* Modal for detailed deep dive */}
-        {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
 
       </div>
     </section>
