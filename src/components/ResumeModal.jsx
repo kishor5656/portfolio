@@ -91,6 +91,15 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <Phone className="w-3.5 h-3.5 text-slate-500" />
                 {personalInfo.phoneFormatted}
               </span>
+              <span>•</span>
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-sky-700 hover:underline"
+              >
+                <span>linkedin.com/in/nandakishorvm</span>
+              </a>
             </div>
           </div>
 

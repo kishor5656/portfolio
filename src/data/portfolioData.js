@@ -6,8 +6,8 @@ export const personalInfo = {
   email: "nandakishor5656@gmail.com",
   phone: "+919846159776",
   phoneFormatted: "+91 98461 59776",
-  github: "https://github.com/kishor5656", // GitHub profile
-  linkedin: "https://linkedin.com/in/nandakishor-vm", // Update with your LinkedIn profile
+  github: "https://github.com/kishor5656",
+  linkedin: "https://www.linkedin.com/in/nandakishorvm",
   resumeUrl: "/resume.pdf", // Real PDF placed in public/resume.pdf
 
   shortIntro:

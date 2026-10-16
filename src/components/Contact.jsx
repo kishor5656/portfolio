@@ -156,9 +156,9 @@ export default function Contact() {
                   <Linkedin className="w-4 h-4" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-mono text-slate-400">Profile</div>
-                  <div className="text-xs font-semibold text-slate-200 group-hover:text-white truncate">
-                    LinkedIn
+                  <div className="text-[11px] font-mono text-slate-400">LinkedIn</div>
+                  <div className="text-xs font-semibold text-slate-200 group-hover:text-brand-400 truncate">
+                    in/nandakishorvm
                   </div>
                 </div>
               </a>
