@@ -45,6 +45,16 @@ export default function ResumeModal({ isOpen, onClose }) {
           </div>
 
           <div className="flex items-center gap-2">
+            <a
+              href={personalInfo.resumeUrl}
+              download="Nanda_Kishor_VM_Resume.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-surface-900 border border-slate-700 hover:border-brand-500/50 hover:text-brand-300 transition-colors"
+              title="Download Authentic PDF"
+            >
+              <Download className="w-3.5 h-3.5 text-brand-400" />
+              <span>Download PDF</span>
+            </a>
+
             <button
               onClick={handlePrint}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-surface-900 border border-slate-700 hover:border-slate-500 hover:text-white transition-colors"
@@ -187,15 +197,23 @@ export default function ResumeModal({ isOpen, onClose }) {
 
         </div>
 
-        {/* Modal Footer */}
-        <div className="px-6 py-3.5 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+        <div className="px-6 py-3.5 bg-slate-950 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
           <span>Recruiter-ready ATS resume view</span>
-          <button
-            onClick={handlePrint}
-            className="px-4 py-2 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition-colors"
-          >
-            Save as PDF / Print
-          </button>
+          <div className="flex items-center gap-2">
+            <a
+              href={personalInfo.resumeUrl}
+              download="Nanda_Kishor_VM_Resume.pdf"
+              className="px-3.5 py-2 rounded-lg bg-surface-900 border border-slate-700 hover:border-brand-500/50 text-slate-200 hover:text-white font-medium transition-colors"
+            >
+              Download PDF
+            </a>
+            <button
+              onClick={handlePrint}
+              className="px-4 py-2 rounded-lg bg-brand-400 hover:bg-brand-300 text-slate-950 font-bold transition-colors"
+            >
+              Save as PDF / Print
+            </button>
+          </div>
         </div>
 
       </div>

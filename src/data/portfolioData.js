@@ -8,7 +8,7 @@ export const personalInfo = {
   phoneFormatted: "+91 98461 59776",
   github: "https://github.com/kishor5656",
   linkedin: "https://www.linkedin.com/in/nandakishorvm",
-  resumeUrl: "/resume.pdf", // Real PDF placed in public/resume.pdf
+  resumeUrl: "./resume.pdf", // Real PDF placed in public/resume.pdf
 
   shortIntro:
     "Flutter & Angular developer with hands-on experience building web and mobile applications using Flutter, Angular, Spring Boot, and the MERN stack. Seeking opportunities in Flutter, Angular, or full-stack development.",
