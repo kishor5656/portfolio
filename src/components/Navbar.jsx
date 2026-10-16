@@ -19,17 +19,31 @@ export default function Navbar({ onDownloadCv }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrollY = window.scrollY || window.pageYOffset;
+      setIsScrolled(scrollY > 20);
 
-      // Section spy
+      // Top of page check
+      if (scrollY < 120) {
+        setActiveSection('home');
+        return;
+      }
+
+      // Bottom of page check (ensures Contact activates when user reaches footer)
+      if (window.innerHeight + scrollY >= document.documentElement.scrollHeight - 60) {
+        setActiveSection('contact');
+        return;
+      }
+
+      // Viewport-based section spy
       const sections = navItems.map((item) => item.href.substring(1));
-      const scrollPosition = window.scrollY + 200;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 180) {
+            setActiveSection(sections[i]);
+            break;
+          }
         }
       }
     };
@@ -42,6 +56,12 @@ export default function Navbar({ onDownloadCv }) {
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
+
+    if (href === '#home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });

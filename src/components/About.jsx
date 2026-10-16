@@ -31,7 +31,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 border-t border-slate-800/80 bg-surface-950">
+    <section id="about" className="py-20 md:py-28 border-t border-slate-800/80 bg-surface-950 scroll-mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

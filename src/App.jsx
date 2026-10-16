@@ -41,7 +41,7 @@ export default function App() {
       <Footer />
 
       {/* Instant CV / Resume Preview Modal */}
-      <ResumeModal isOpen={cvModalOpen} onClose={handleCloseCvModal} />
+      {cvModalOpen && <ResumeModal isOpen={cvModalOpen} onClose={handleCloseCvModal} />}
     </div>
   );
 }

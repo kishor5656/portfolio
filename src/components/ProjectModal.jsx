@@ -4,17 +4,20 @@ import ProjectMockup from './ProjectMockup';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
+    if (!project) return;
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
+
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  }, [project, onClose]);
 
   if (!project) return null;
 
