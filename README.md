@@ -1,6 +1,6 @@
-# Nanda Kishor V M — Developer Portfolio
+# Nanda Kishor V M — Flutter & Angular Developer Portfolio
 
-A modern, professional, recruiter-friendly developer portfolio website built for **Nanda Kishor V M**, Software Developer specializing in **Flutter, Angular, Spring Boot, and MERN stack** technologies.
+A modern, professional, recruiter-friendly developer portfolio website built for **Nanda Kishor V M**, Flutter & Angular Developer specializing in **Flutter, Angular, Spring Boot, and MERN stack** technologies.
 
 ## 🚀 Features
 

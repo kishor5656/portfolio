@@ -21,7 +21,7 @@ export default function Hero({ onDownloadCv }) {
   const codeSnippet = `// nanda_kishor.config.ts
 export const developer = {
   name: "Nanda Kishor V M",
-  role: "Software Developer",
+  role: "Flutter & Angular Developer",
   location: "Kozhikode, Kerala",
   currentRole: "Foxfennecs Technologies LLP",
   technologies: [

@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Nanda Kishor V M",
-  role: "Software Developer",
+  role: "Flutter & Angular Developer",
   educationDegree: "B.Tech in Electronics & Communication",
   location: "Kozhikode, Kerala, India",
   email: "nandakishor5656@gmail.com",
@@ -11,7 +11,7 @@ export const personalInfo = {
   resumeUrl: "/resume.pdf", // Real PDF placed in public/resume.pdf
 
   shortIntro:
-    "Software developer with hands-on experience building web and mobile applications using Flutter, Angular, Spring Boot, and the MERN stack. Seeking opportunities in Flutter, Angular, or full-stack development.",
+    "Flutter & Angular developer with hands-on experience building web and mobile applications using Flutter, Angular, Spring Boot, and the MERN stack. Seeking opportunities in Flutter, Angular, or full-stack development.",
 
   heroDescription:
     "I build responsive web and mobile applications with clean interfaces and reliable backend integrations using Flutter, Angular, Spring Boot, and MERN stack technologies.",
@@ -20,7 +20,7 @@ export const personalInfo = {
     "I am a B.Tech graduate in Electronics and Communication with practical experience in full-stack and mobile application development. Currently contributing to application development at Foxfennecs Technologies LLP, I work extensively with Flutter, Angular, and Spring Boot. I also completed a comprehensive training program in MERN Full Stack Development, gaining hands-on experience with MongoDB, Express.js, React, and Node.js. I enjoy collaborating with teams, solving problems, and building applications that provide seamless user experiences.",
 
   highlights: [
-    { label: "Current Role", value: "Software Developer at Foxfennecs Technologies" },
+    { label: "Current Role", value: "Flutter & Angular Developer at Foxfennecs Technologies" },
     { label: "Education", value: "B.Tech ECE (APJ Abdul Kalam Tech. Univ.)" },
     { label: "Core Specialties", value: "Flutter, Angular, Spring Boot & MERN" },
     { label: "Base Location", value: "Kozhikode, Kerala" },
@@ -56,7 +56,7 @@ export const skillsData = [
 
 export const experienceData = [
   {
-    role: "Software Developer",
+    role: "Flutter & Angular Developer",
     company: "Foxfennecs Technologies LLP",
     location: "Calicut, Kerala",
     period: "Current",
