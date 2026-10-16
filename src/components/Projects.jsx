@@ -1,7 +1,6 @@
 import React from 'react';
 import { FolderGit2, CheckCircle2 } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
-import ProjectMockup from './ProjectMockup';
 
 export default function Projects() {
   return (
@@ -34,60 +33,50 @@ export default function Projects() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="flex flex-col rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-slate-700 overflow-hidden shadow-lg shadow-black/20 hover:shadow-brand-500/5 transition-all duration-300 group"
+              className="p-6 sm:p-7 flex flex-col justify-between rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-slate-700 shadow-lg shadow-black/20 hover:shadow-brand-500/5 transition-all duration-300 group space-y-6"
             >
-              {/* Project Preview Screenshot / Mockup */}
-              <div className="relative">
-                <ProjectMockup theme={project.previewTheme} title={project.title} />
+              {/* Header: Category Badge & Project Title */}
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-300 border border-brand-500/20">
+                    {project.category}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold text-white group-hover:text-brand-300 transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm text-slate-300 leading-relaxed">
+                  {project.tagline}
+                </p>
               </div>
 
-              {/* Card Body */}
-              <div className="p-6 flex flex-col flex-1 justify-between space-y-5">
-                
-                {/* Header: Category Badge & Project Title */}
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-brand-500/10 text-brand-300 border border-brand-500/20">
-                      {project.category}
-                    </span>
-                  </div>
+              {/* Tech Stack Pills */}
+              <div className="flex flex-wrap gap-1.5">
+                {project.techStack.map((tech, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="px-2.5 py-1 rounded text-xs font-mono text-slate-300 bg-surface-950 border border-slate-800/80"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
-                  <h3 className="text-xl font-bold text-white group-hover:text-brand-300 transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-sm text-slate-300 leading-relaxed">
-                    {project.tagline}
-                  </p>
+              {/* Key Features */}
+              <div className="space-y-2 pt-2 border-t border-slate-800/60 flex-1">
+                <div className="text-[11px] font-mono uppercase tracking-wider text-slate-400">
+                  Key Features
                 </div>
-
-                {/* Tech Stack Pills */}
-                <div className="flex flex-wrap gap-1.5">
-                  {project.techStack.map((tech, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="px-2.5 py-1 rounded text-xs font-mono text-slate-300 bg-surface-950 border border-slate-800/80"
-                    >
-                      {tech}
-                    </span>
+                <ul className="space-y-2">
+                  {project.features.map((feat, fIdx) => (
+                    <li key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-400 mt-0.5 shrink-0" />
+                      <span className="flex-1 break-words">{feat}</span>
+                    </li>
                   ))}
-                </div>
-
-                {/* Key Features */}
-                <div className="space-y-2 pt-2 border-t border-slate-800/60 flex-1">
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-slate-400">
-                    Key Features
-                  </div>
-                  <ul className="space-y-2">
-                    {project.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-400 mt-0.5 shrink-0" />
-                        <span className="flex-1 break-words">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
+                </ul>
               </div>
             </div>
           ))}
