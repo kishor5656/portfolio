@@ -77,7 +77,7 @@ export const developer = {
 
             {/* Name & Title */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-sans break-words">
+              <h1 className="text-2xl sm:text-4xl md:text-[40px] lg:text-[44px] xl:text-5xl font-extrabold tracking-tight text-white font-sans whitespace-nowrap">
                 <span className="text-slate-300 font-medium">Hi, I'm </span>
                 <span>{personalInfo.name}</span>
               </h1>
