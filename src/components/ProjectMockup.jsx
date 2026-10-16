@@ -175,7 +175,7 @@ export default function ProjectMockup({ theme, title }) {
               <div className="p-1.5 rounded-md bg-amber-500/20 text-amber-400 border border-amber-500/30">
                 <Wallet className="w-4 h-4" />
               </div>
-              <span className="text-xs font-mono font-semibold text-slate-200">RBTEC Fintech</span>
+              <span className="text-xs font-mono font-semibold text-slate-200">RBTEC</span>
             </div>
             <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
               <Smartphone className="w-3 h-3" /> Mobile Payments
@@ -207,7 +207,7 @@ export default function ProjectMockup({ theme, title }) {
               <div className="p-1.5 rounded-md bg-purple-500/20 text-purple-400 border border-purple-500/30">
                 <Home className="w-4 h-4" />
               </div>
-              <span className="text-xs font-mono font-semibold text-slate-200">Rental & Sales Hub</span>
+              <span className="text-xs font-mono font-semibold text-slate-200">Rental Hub</span>
             </div>
             <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">
               Android & iOS
@@ -221,7 +221,7 @@ export default function ProjectMockup({ theme, title }) {
               <div className="h-1.5 w-2/3 bg-slate-800 rounded mt-1" />
             </div>
             <div className="p-2 rounded bg-surface-900/80 border border-slate-800">
-              <div className="text-[10px] font-mono text-purple-300">Sales Inquiries</div>
+              <div className="text-[10px] font-mono text-purple-300">Inquiries</div>
               <div className="h-1.5 w-full bg-slate-700 rounded mt-1.5" />
               <div className="h-1.5 w-1/2 bg-slate-800 rounded mt-1" />
             </div>
