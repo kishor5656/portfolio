@@ -78,7 +78,8 @@ export const developer = {
             {/* Name & Title */}
             <div className="space-y-2">
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-sans break-words">
-                {personalInfo.name}
+                <span className="text-slate-300 font-medium">Hi, I'm </span>
+                <span>{personalInfo.name}</span>
               </h1>
               <p className="text-lg sm:text-2xl font-semibold text-brand-400 font-mono tracking-tight break-words">
                 {personalInfo.role}
