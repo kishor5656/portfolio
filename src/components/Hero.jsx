@@ -70,17 +70,17 @@ export const developer = {
           <div className="lg:col-span-7 space-y-6">
             
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-900 border border-slate-800 text-xs font-mono text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Seeking Opportunities in Flutter & Full-Stack</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-900 border border-slate-800 text-xs font-mono text-slate-300 max-w-full">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+              <span className="leading-snug truncate sm:text-clip">Seeking Opportunities in Flutter & Full-Stack</span>
             </div>
 
             {/* Name & Title */}
             <div className="space-y-2">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-sans">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-sans break-words">
                 {personalInfo.name}
               </h1>
-              <p className="text-xl sm:text-2xl font-semibold text-brand-400 font-mono tracking-tight">
+              <p className="text-lg sm:text-2xl font-semibold text-brand-400 font-mono tracking-tight break-words">
                 {personalInfo.role}
               </p>
             </div>

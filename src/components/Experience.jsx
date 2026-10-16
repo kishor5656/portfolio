@@ -46,7 +46,7 @@ export default function Experience() {
 
               {/* Experience Card */}
               <div
-                className={`p-6 sm:p-8 rounded-xl border transition-all duration-200 ${
+                className={`p-5 sm:p-8 rounded-xl border transition-all duration-200 ${
                   exp.isCurrent
                     ? 'bg-surface-900/80 border-slate-700 shadow-xl shadow-brand-500/5 hover:border-brand-500/40'
                     : 'bg-surface-900/50 border-slate-800/80 hover:border-slate-700'

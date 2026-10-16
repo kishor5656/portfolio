@@ -51,7 +51,7 @@ export default function About() {
           
           {/* Main Narrative */}
           <div className="lg:col-span-7 space-y-5">
-            <div className="p-6 sm:p-8 rounded-xl bg-surface-900/60 border border-slate-800 space-y-4 text-slate-300 leading-relaxed text-base sm:text-lg">
+            <div className="p-5 sm:p-7 md:p-8 rounded-xl bg-surface-900/60 border border-slate-800 space-y-4 text-slate-300 leading-relaxed text-base sm:text-lg break-words">
               <p>
                 {personalInfo.aboutNarrative}
               </p>

@@ -44,26 +44,26 @@ export default function Skills() {
             return (
               <div
                 key={idx}
-                className="p-6 sm:p-7 rounded-xl bg-surface-900/70 border border-slate-800/90 hover:border-slate-700/90 transition-all duration-200 group flex flex-col justify-between"
+                className="p-5 sm:p-7 rounded-xl bg-surface-900/70 border border-slate-800/90 hover:border-slate-700/90 transition-all duration-200 group flex flex-col justify-between"
               >
                 <div>
                   {/* Category Header */}
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2.5 rounded-lg bg-surface-950 border border-slate-800 text-brand-400 group-hover:border-brand-500/30 group-hover:text-brand-300 transition-colors">
+                    <div className="p-2.5 rounded-lg bg-surface-950 border border-slate-800 text-brand-400 group-hover:border-brand-500/30 group-hover:text-brand-300 transition-colors shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-slate-100 group-hover:text-white transition-colors">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-lg font-bold text-slate-100 group-hover:text-white transition-colors truncate">
                         {group.category}
                       </h3>
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-slate-400 leading-normal">
                         {group.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Skills Badges */}
-                  <div className="flex flex-wrap gap-2.5 mt-5">
+                  <div className="flex flex-wrap gap-2 mt-5">
                     {group.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
@@ -77,7 +77,7 @@ export default function Skills() {
                 </div>
 
                 {/* Subtext info */}
-                <div className="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <div className="mt-6 pt-4 border-t border-slate-800/60 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-400">
                   <span>{group.skills.length} core competencies</span>
                   <span className="text-slate-400 group-hover:text-brand-400 transition-colors">Hands-on application</span>
                 </div>

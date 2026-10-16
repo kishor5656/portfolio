@@ -83,19 +83,19 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Email Card */}
-            <div className="p-5 rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-slate-700 transition-all">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-400">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-slate-700 transition-all">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0 flex-1">
+                  <div className="p-2.5 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-400 shrink-0">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <div className="text-[11px] font-mono text-slate-400 uppercase">
                       Email Address
                     </div>
                     <a
                       href={`mailto:${personalInfo.email}`}
-                      className="text-sm font-semibold text-slate-200 hover:text-brand-400 transition-colors"
+                      className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-brand-400 transition-colors break-all sm:break-normal block truncate sm:text-clip"
                     >
                       {personalInfo.email}
                     </a>
@@ -104,7 +104,7 @@ export default function Contact() {
 
                 <button
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-lg bg-surface-950 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+                  className="p-2 rounded-lg bg-surface-950 text-slate-400 hover:text-white border border-slate-800 transition-colors shrink-0"
                   title="Copy email to clipboard"
                   aria-label="Copy email address"
                 >
@@ -114,19 +114,19 @@ export default function Contact() {
             </div>
 
             {/* Phone Card */}
-            <div className="p-5 rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-slate-700 transition-all">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-400">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-slate-700 transition-all">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0 flex-1">
+                  <div className="p-2.5 rounded-lg bg-brand-500/10 border border-brand-500/20 text-brand-400 shrink-0">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <div className="text-[11px] font-mono text-slate-400 uppercase">
                       Phone Number
                     </div>
                     <a
                       href={`tel:${personalInfo.phone}`}
-                      className="text-sm font-semibold text-slate-200 hover:text-brand-400 transition-colors"
+                      className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-brand-400 transition-colors block"
                     >
                       {personalInfo.phoneFormatted}
                     </a>
@@ -135,7 +135,7 @@ export default function Contact() {
 
                 <button
                   onClick={handleCopyPhone}
-                  className="p-2 rounded-lg bg-surface-950 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+                  className="p-2 rounded-lg bg-surface-950 text-slate-400 hover:text-white border border-slate-800 transition-colors shrink-0"
                   title="Copy phone to clipboard"
                   aria-label="Copy phone number"
                 >
@@ -145,19 +145,19 @@ export default function Contact() {
             </div>
 
             {/* Social Links Cards */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-brand-500/40 hover:bg-slate-800/50 transition-all flex items-center gap-3 group"
               >
-                <div className="p-2 rounded-lg bg-surface-950 border border-slate-800 text-slate-400 group-hover:text-brand-400 transition-colors">
+                <div className="p-2 rounded-lg bg-surface-950 border border-slate-800 text-slate-400 group-hover:text-brand-400 transition-colors shrink-0">
                   <Linkedin className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-[11px] font-mono text-slate-400">Profile</div>
-                  <div className="text-xs font-semibold text-slate-200 group-hover:text-white">
+                  <div className="text-xs font-semibold text-slate-200 group-hover:text-white truncate">
                     LinkedIn
                   </div>
                 </div>
@@ -169,12 +169,12 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-surface-900/80 border border-slate-800/90 hover:border-brand-500/40 hover:bg-slate-800/50 transition-all flex items-center gap-3 group"
               >
-                <div className="p-2 rounded-lg bg-surface-950 border border-slate-800 text-slate-400 group-hover:text-brand-400 transition-colors">
+                <div className="p-2 rounded-lg bg-surface-950 border border-slate-800 text-slate-400 group-hover:text-brand-400 transition-colors shrink-0">
                   <Github className="w-4 h-4" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-[11px] font-mono text-slate-400">Repositories</div>
-                  <div className="text-xs font-semibold text-slate-200 group-hover:text-white">
+                  <div className="text-xs font-semibold text-slate-200 group-hover:text-white truncate">
                     GitHub
                   </div>
                 </div>

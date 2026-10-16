@@ -98,15 +98,15 @@ export default function Projects() {
                   <div className="text-[11px] font-mono uppercase tracking-wider text-slate-400">
                     Key Features
                   </div>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {project.features.slice(0, 3).map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2 text-xs text-slate-300">
+                      <li key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-300 leading-relaxed">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-400 mt-0.5 shrink-0" />
-                        <span className="line-clamp-1">{feat}</span>
+                        <span className="flex-1 break-words">{feat}</span>
                       </li>
                     ))}
                     {project.features.length > 3 && (
-                      <li className="text-[11px] font-mono text-slate-400 pl-5">
+                      <li className="text-[11px] font-mono text-slate-400 pl-6">
                         + {project.features.length - 3} more architectural capabilities
                       </li>
                     )}
@@ -114,15 +114,15 @@ export default function Projects() {
                 </div>
 
                 {/* Card Actions: GitHub, Live Demo & Details */}
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-2">
+                <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex flex-wrap items-center gap-2">
                     {/* GitHub Button */}
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-surface-950 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-colors"
-                      title="GitHub Repository Placeholder"
+                      title="GitHub Repository"
                     >
                       <Github className="w-3.5 h-3.5 text-slate-400" />
                       <span>Code</span>
@@ -141,8 +141,8 @@ export default function Projects() {
                         <span>Demo</span>
                       </a>
                     ) : (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-mono text-slate-400 px-2 py-1 bg-surface-950/60 rounded border border-slate-800/60">
-                        Demo N/A
+                      <span className="inline-flex items-center gap-1 text-[11px] font-mono text-slate-400 px-2.5 py-1 bg-surface-950/70 rounded border border-slate-800/60">
+                        Demo on request
                       </span>
                     )}
                   </div>
@@ -150,7 +150,7 @@ export default function Projects() {
                   {/* Expand Modal Trigger */}
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-1 text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-mono text-brand-400 hover:text-brand-300 transition-colors py-1 px-1.5 rounded hover:bg-brand-500/10"
                   >
                     <span>Inspect</span>
                     <ChevronRight className="w-3.5 h-3.5" />

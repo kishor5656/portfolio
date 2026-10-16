@@ -18,7 +18,7 @@ export default function ProjectMockup({ theme, title }) {
   switch (theme) {
     case 'ecommerce':
       return (
-        <div className="w-full h-48 bg-gradient-to-br from-slate-900 via-slate-950 to-sky-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
+        <div className="w-full min-h-[180px] bg-gradient-to-br from-slate-900 via-slate-950 to-sky-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]" />
           
@@ -81,7 +81,7 @@ export default function ProjectMockup({ theme, title }) {
 
     case 'healthcare':
       return (
-        <div className="w-full h-48 bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
+        <div className="w-full min-h-[180px] bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
           <div className="flex items-center justify-between z-10">
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
@@ -132,7 +132,7 @@ export default function ProjectMockup({ theme, title }) {
 
     case 'hospital':
       return (
-        <div className="w-full h-48 bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
+        <div className="w-full min-h-[180px] bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
           <div className="flex items-center justify-between z-10">
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-md bg-blue-500/20 text-blue-400 border border-blue-500/30">
@@ -169,7 +169,7 @@ export default function ProjectMockup({ theme, title }) {
 
     case 'fintech':
       return (
-        <div className="w-full h-48 bg-gradient-to-br from-slate-900 via-slate-950 to-amber-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
+        <div className="w-full min-h-[180px] bg-gradient-to-br from-slate-900 via-slate-950 to-amber-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
           <div className="flex items-center justify-between z-10">
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-md bg-amber-500/20 text-amber-400 border border-amber-500/30">
@@ -201,7 +201,7 @@ export default function ProjectMockup({ theme, title }) {
 
     case 'rental':
       return (
-        <div className="w-full h-48 bg-gradient-to-br from-slate-900 via-slate-950 to-purple-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
+        <div className="w-full min-h-[180px] bg-gradient-to-br from-slate-900 via-slate-950 to-purple-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
           <div className="flex items-center justify-between z-10">
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-md bg-purple-500/20 text-purple-400 border border-purple-500/30">
@@ -237,7 +237,7 @@ export default function ProjectMockup({ theme, title }) {
     case 'calculator':
     default:
       return (
-        <div className="w-full h-48 bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
+        <div className="w-full min-h-[180px] bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950/40 p-4 flex flex-col justify-between border-b border-slate-800 relative overflow-hidden group-hover:scale-[1.01] transition-transform duration-300">
           <div className="flex items-center justify-between z-10">
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-md bg-teal-500/20 text-teal-400 border border-teal-500/30">
