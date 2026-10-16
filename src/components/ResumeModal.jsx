@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react';
 import { X, Printer, Download, FileText, CheckCircle2, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
-import { personalInfo, experienceData, skillsData, projectsData, educationData } from '../data/portfolioData';
+import {
+  personalInfo,
+  experienceData,
+  skillsData,
+  projectsData,
+  educationData,
+  softSkillsData,
+  languagesData
+} from '../data/portfolioData';
 
 export default function ResumeModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -103,6 +111,15 @@ export default function ResumeModal({ isOpen, onClose }) {
               </span>
               <span>•</span>
               <a
+                href={personalInfo.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-sky-700 hover:underline"
+              >
+                <span>kishor5656.github.io/portfolio</span>
+              </a>
+              <span>•</span>
+              <a
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -182,7 +199,7 @@ export default function ResumeModal({ isOpen, onClose }) {
           </div>
 
           {/* Education */}
-          <div>
+          <div className="mb-6">
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2 font-mono">
               Education
             </h2>
@@ -195,6 +212,38 @@ export default function ResumeModal({ isOpen, onClose }) {
             </div>
           </div>
 
+          {/* Languages & Soft Skills */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2 border-t border-slate-200">
+            <div>
+              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2 font-mono">
+                Languages
+              </h2>
+              <div className="space-y-1 text-xs text-slate-700">
+                {languagesData.map((lang, idx) => (
+                  <div key={idx} className="flex justify-between">
+                    <span className="font-medium text-slate-900">{lang.language}</span>
+                    <span className="font-mono text-slate-600">{lang.level}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-800 border-b border-slate-300 pb-1 mb-2 font-mono">
+                Soft Skills
+              </h2>
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {softSkillsData.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-block px-2 py-0.5 rounded text-[11px] font-sans bg-slate-100 text-slate-800 border border-slate-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="px-6 py-3.5 bg-slate-950 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
